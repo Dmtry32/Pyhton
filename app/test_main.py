@@ -1,8 +1,5 @@
-#from fastapi import FastAPI
 from fastapi.testclient import TestClient
 from .main import app
-from httpx import WSGITransport
-transport = WSGITransport(app=app)
 client = TestClient(app)
 
 def test_read_main():
